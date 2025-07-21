@@ -12,12 +12,7 @@ import 'aos/dist/aos.css';
 import { useRouter } from 'next/navigation.js';
 
 export default function Dashboard() {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000, // animation duration
-      once: true,    // only animate once
-    });
-  }, []);
+
   const [selectedFilter, setSelectedFilter] = useState('*');
   const [displayItems, setDisplayItems] = useState(menuItems);
   const [isTransitioning, setIsTransitioning] = useState(false);
